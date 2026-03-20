@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>腾讯会议web端组件库</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 头部导航 -->
+    <header class="header">
+        <div class="header-container">
+            <div class="header-left">
+                <h1 class="logo">腾讯会议web端组件库</h1>
+            </div>
+            <div class="header-right">
+                <button class="theme-toggle" id="themeToggle" aria-label="切换主题">
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <circle cx="12" cy="12" r="5"/>
+                        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                    </svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <!-- 左侧导航栏 -->
+        <aside class="sidebar">
+            <nav class="nav-menu">
+                <!-- 全局规范 -->
+                <div class="nav-section">
+                    <div class="nav-section-title">全局规范</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="?page=color" class="nav-link active" data-page="color">
+                                <span class="nav-link-text">Color色彩</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="?page=shadow" class="nav-link" data-page="shadow">
+                                <span class="nav-link-text">Shadow阴影</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="?page=radius" class="nav-link" data-page="radius">
+                                <span class="nav-link-text">Radius圆角</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 基础 -->
+                <div class="nav-section">
+                    <div class="nav-section-title">基础</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="?page=button" class="nav-link" data-page="button">
+                                <span class="nav-link-text">Button按钮</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="?page=icon" class="nav-link" data-page="icon">
+                                <span class="nav-link-text">Icon图标</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- 右侧内容区 -->
+        <main class="content">
+            <div class="content-wrapper">
+                <h2 class="page-title" id="pageTitle">Color色彩</h2>
+                <p class="page-description" id="pageDescription">色彩是界面设计中最重要的视觉元素之一。腾讯会议的色彩系统遵循品牌调性，提供清晰、一致的视觉体验。</p>
+                
+                <!-- Tab切换 -->
+                <div class="tabs" id="tabs">
+                    <div class="tab-list">
+                        <button class="tab-btn active" data-tab="demo">示例</button>
+                        <button class="tab-btn" data-tab="api">API</button>
+                        <button class="tab-btn" data-tab="guide">指南</button>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="tab-demo"></div>
+                        <div class="tab-pane" id="tab-api"></div>
+                        <div class="tab-pane" id="tab-guide"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
