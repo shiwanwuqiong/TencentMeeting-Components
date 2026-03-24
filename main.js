@@ -252,28 +252,28 @@ const contentGenerators = {
     // Radius圆角
     'radius-demo': () => `
         <div class="demo-section">
-            <div class="demo-section-title">圆角规范</div>
+            <div class="demo-section-title">圆角规范（基于TDesign）</div>
             <div class="demo-card">
                 <div class="radius-grid">
                     <div class="radius-item">
-                        <div class="radius-swatch radius-sm">4px</div>
+                        <div class="radius-swatch radius-sm">var(--td-radius-small, 4px)</div>
                         <div class="radius-info">
                             <div class="radius-name">Small</div>
-                            <div class="radius-value">--border-radius-sm</div>
+                            <div class="radius-value">--td-radius-small</div>
                         </div>
                     </div>
                     <div class="radius-item">
-                        <div class="radius-swatch radius-md">8px</div>
+                        <div class="radius-swatch radius-md">var(--td-radius-medium, 8px)</div>
                         <div class="radius-info">
                             <div class="radius-name">Medium</div>
-                            <div class="radius-value">--border-radius-md</div>
+                            <div class="radius-value">--td-radius-medium</div>
                         </div>
                     </div>
                     <div class="radius-item">
-                        <div class="radius-swatch radius-lg">12px</div>
+                        <div class="radius-swatch radius-lg">var(--td-radius-large, 12px)</div>
                         <div class="radius-info">
                             <div class="radius-name">Large</div>
-                            <div class="radius-value">--border-radius-lg</div>
+                            <div class="radius-value">--td-radius-large</div>
                         </div>
                     </div>
                 </div>
@@ -300,28 +300,28 @@ const contentGenerators = {
 
     'radius-api': () => `
         <div class="demo-section">
-            <div class="demo-section-title">圆角变量</div>
+            <div class="demo-section-title">TDesign圆角变量</div>
             <table class="api-table">
                 <thead>
                     <tr>
                         <th>变量名</th>
-                        <th>值</th>
+                        <th>默认值</th>
                         <th>用途</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><code>--border-radius-sm</code></td>
+                        <td><code>--td-radius-small</code></td>
                         <td><code>4px</code></td>
                         <td>小圆角，用于小尺寸元素</td>
                     </tr>
                     <tr>
-                        <td><code>--border-radius-md</code></td>
+                        <td><code>--td-radius-medium</code></td>
                         <td><code>8px</code></td>
                         <td>中等圆角，用于卡片、按钮等</td>
                     </tr>
                     <tr>
-                        <td><code>--border-radius-lg</code></td>
+                        <td><code>--td-radius-large</code></td>
                         <td><code>12px</code></td>
                         <td>大圆角，用于对话框、大型卡片等</td>
                     </tr>
@@ -346,7 +346,7 @@ const contentGenerators = {
     // Button按钮
     'button-demo': () => `
         <div class="demo-section">
-            <div class="demo-section-title">按钮类型</div>
+            <div class="demo-section-title">按钮类型（基于TDesign）</div>
             <div class="demo-card">
                 <div class="button-group">
                     <button class="t-button t-button-primary">主要按钮</button>
@@ -385,7 +385,7 @@ const contentGenerators = {
 
     'button-api': () => `
         <div class="demo-section">
-            <div class="demo-section-title">按钮Props</div>
+            <div class="demo-section-title">TDesign按钮Props</div>
             <table class="api-table">
                 <thead>
                     <tr>
@@ -442,26 +442,205 @@ const contentGenerators = {
     // Shadow阴影（占位）
     'shadow-demo': () => `
         <div class="demo-section">
-            <div class="demo-section-title">阴影规范</div>
+            <div class="demo-section-title">阴影规范（基于TDesign）</div>
             <div class="demo-card">
-                <p>阴影组件开发中...</p>
+                <div class="shadow-grid">
+                    <div class="shadow-item">
+                        <div class="shadow-swatch shadow-1">Shadow 1</div>
+                        <div class="shadow-info">
+                            <div class="shadow-name">一级阴影</div>
+                            <div class="shadow-value">--td-shadow-1</div>
+                        </div>
+                    </div>
+                    <div class="shadow-item">
+                        <div class="shadow-swatch shadow-2">Shadow 2</div>
+                        <div class="shadow-info">
+                            <div class="shadow-name">二级阴影</div>
+                            <div class="shadow-value">--td-shadow-2</div>
+                        </div>
+                    </div>
+                    <div class="shadow-item">
+                        <div class="shadow-swatch shadow-3">Shadow 3</div>
+                        <div class="shadow-info">
+                            <div class="shadow-name">三级阴影</div>
+                            <div class="shadow-value">--td-shadow-3</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <div class="demo-section-title">应用示例</div>
+            <div class="demo-card">
+                <div class="shadow-examples">
+                    <div class="shadow-example">
+                        <div class="example-card shadow-1">一级阴影卡片</div>
+                    </div>
+                    <div class="shadow-example">
+                        <div class="example-card shadow-2">二级阴影卡片</div>
+                    </div>
+                    <div class="shadow-example">
+                        <div class="example-card shadow-3">三级阴影卡片</div>
+                    </div>
+                </div>
             </div>
         </div>
     `,
-    'shadow-api': () => `<div class="demo-section"><p>API文档开发中...</p></div>`,
-    'shadow-guide': () => `<div class="demo-section"><p>使用指南开发中...</p></div>`,
+    'shadow-api': () => `
+        <div class="demo-section">
+            <div class="demo-section-title">TDesign阴影变量</div>
+            <table class="api-table">
+                <thead>
+                    <tr>
+                        <th>变量名</th>
+                        <th>默认值</th>
+                        <th>用途</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>--td-shadow-1</code></td>
+                        <td><code>0 1px 2px rgba(0, 0, 0, 0.05)</code></td>
+                        <td>一级阴影，用于轻度悬浮效果</td>
+                    </tr>
+                    <tr>
+                        <td><code>--td-shadow-2</code></td>
+                        <td><code>0 2px 8px rgba(0, 0, 0, 0.08)</code></td>
+                        <td>二级阴影，用于卡片悬浮效果</td>
+                    </tr>
+                    <tr>
+                        <td><code>--td-shadow-3</code></td>
+                        <td><code>0 4px 16px rgba(0, 0, 0, 0.12)</code></td>
+                        <td>三级阴影，用于弹窗等强悬浮效果</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    `,
+    'shadow-guide': () => `
+        <div class="guide-section">
+            <h3>使用原则</h3>
+            <p>TDesign阴影的使用应该遵循以下原则：</p>
+            <ul>
+                <li>一级阴影用于轻度悬浮效果，如按钮hover状态</li>
+                <li>二级阴影用于卡片悬浮效果，如卡片、导航栏</li>
+                <li>三级阴影用于强悬浮效果，如弹窗、对话框</li>
+                <li>保持阴影的一致性，避免混用过多不同级别的阴影</li>
+            </ul>
+        </div>
+    `,
 
     // Icon图标（占位）
     'icon-demo': () => `
         <div class="demo-section">
-            <div class="demo-section-title">图标规范</div>
+            <div class="demo-section-title">图标规范（基于TDesign图标库）</div>
             <div class="demo-card">
-                <p>图标组件开发中...</p>
+                <p>TDesign 提供了一套完整的图标系统，支持多种使用方式：</p>
+                <div class="icon-grid">
+                    <div class="icon-item">
+                        <div class="icon-box">
+                            <i class="t-icon t-icon-home"></i>
+                        </div>
+                        <div class="icon-name">首页</div>
+                        <div class="icon-code">t-icon-home</div>
+                    </div>
+                    <div class="icon-item">
+                        <div class="icon-box">
+                            <i class="t-icon t-icon-user"></i>
+                        </div>
+                        <div class="icon-name">用户</div>
+                        <div class="icon-code">t-icon-user</div>
+                    </div>
+                    <div class="icon-item">
+                        <div class="icon-box">
+                            <i class="t-icon t-icon-setting"></i>
+                        </div>
+                        <div class="icon-name">设置</div>
+                        <div class="icon-code">t-icon-setting</div>
+                    </div>
+                    <div class="icon-item">
+                        <div class="icon-box">
+                            <i class="t-icon t-icon-search"></i>
+                        </div>
+                        <div class="icon-name">搜索</div>
+                        <div class="icon-code">t-icon-search</div>
+                    </div>
+                    <div class="icon-item">
+                        <div class="icon-box">
+                            <i class="t-icon t-icon-edit"></i>
+                        </div>
+                        <div class="icon-name">编辑</div>
+                        <div class="icon-code">t-icon-edit</div>
+                    </div>
+                    <div class="icon-item">
+                        <div class="icon-box">
+                            <i class="t-icon t-icon-delete"></i>
+                        </div>
+                        <div class="icon-name">删除</div>
+                        <div class="icon-code">t-icon-delete</div>
+                    </div>
+                </div>
+                <p style="margin-top: 24px; color: var(--text-tertiary); font-size: 14px;">
+                    注：需要引入 TDesign 图标库（tdesign-icons-vue-next）才能正常显示图标。
+                </p>
             </div>
         </div>
     `,
-    'icon-api': () => `<div class="demo-section"><p>API文档开发中...</p></div>`,
-    'icon-guide': () => `<div class="demo-section"><p>使用指南开发中...</p></div>`
+    'icon-api': () => `
+        <div class="demo-section">
+            <div class="demo-section-title">TDesign图标API</div>
+            <table class="api-table">
+                <thead>
+                    <tr>
+                        <th>属性</th>
+                        <th>说明</th>
+                        <th>类型</th>
+                        <th>默认值</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>name</code></td>
+                        <td>图标名称</td>
+                        <td><code>string</code></td>
+                        <td><code>''</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>size</code></td>
+                        <td>图标尺寸</td>
+                        <td><code>'small' | 'medium' | 'large'</code></td>
+                        <td><code>'medium'</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>color</code></td>
+                        <td>图标颜色</td>
+                        <td><code>string</code></td>
+                        <td><code>''</code></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    `,
+    'icon-guide': () => `
+        <div class="guide-section">
+            <h3>使用原则</h3>
+            <p>TDesign图标的使用应该遵循以下原则：</p>
+            <ul>
+                <li>使用语义明确的图标，确保用户能够理解其含义</li>
+                <li>保持图标风格的一致性，避免混用不同风格的图标</li>
+                <li>根据使用场景选择合适的图标尺寸</li>
+                <li>图标的颜色应该与品牌色和功能色保持一致</li>
+            </ul>
+        </div>
+        <div class="guide-section">
+            <h3>引入方式</h3>
+            <p>通过CDN引入TDesign图标库：</p>
+            <pre><code>&lt;link rel="stylesheet" href="https://unpkg.com/tdesign-icons-vue-next/dist/tdesign-icons.min.css"&gt;</code></pre>
+            <p>或者通过npm安装：</p>
+            <pre><code>npm install tdesign-icons-vue-next</code></pre>
+        </div>
+    `
 };
 
 // ==================== 导航和页面切换 ====================
@@ -772,6 +951,127 @@ function addComponentStyles() {
         
         [data-theme="dark"] .example-box {
             background-color: var(--bg-secondary);
+        }
+        
+        /* 图标展示样式 */
+        .icon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 24px;
+            margin-top: 24px;
+        }
+        
+        .icon-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            padding: 16px;
+            background-color: var(--bg-secondary);
+            border-radius: var(--border-radius-md);
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        
+        .icon-item:hover {
+            background-color: var(--bg-hover);
+            transform: translateY(-2px);
+        }
+        
+        .icon-box {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--bg-primary);
+            border-radius: var(--border-radius-md);
+            border: 1px solid var(--border-color);
+        }
+        
+        .icon-box .t-icon {
+            font-size: 24px;
+            color: var(--text-primary);
+        }
+        
+        .icon-name {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+        
+        .icon-code {
+            font-size: 12px;
+            color: var(--text-tertiary);
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            word-break: break-all;
+        }
+        
+        /* 阴影展示样式 */
+        .shadow-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 24px;
+        }
+        
+        .shadow-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+        }
+        
+        .shadow-swatch {
+            width: 120px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--bg-primary);
+            border-radius: var(--border-radius-md);
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+        
+        .shadow-1 { box-shadow: var(--td-shadow-1, 0 1px 2px rgba(0, 0, 0, 0.05)); }
+        .shadow-2 { box-shadow: var(--td-shadow-2, 0 2px 8px rgba(0, 0, 0, 0.08)); }
+        .shadow-3 { box-shadow: var(--td-shadow-3, 0 4px 16px rgba(0, 0, 0, 0.12)); }
+        
+        .shadow-info {
+            text-align: center;
+        }
+        
+        .shadow-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .shadow-value {
+            font-size: 12px;
+            color: var(--text-tertiary);
+            font-family: 'Courier New', monospace;
+        }
+        
+        .shadow-examples {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            margin-top: 16px;
+        }
+        
+        .shadow-example {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .example-card {
+            padding: 32px;
+            background-color: var(--bg-primary);
+            border-radius: var(--border-radius-md);
+            text-align: center;
+            color: var(--text-primary);
+            font-weight: 500;
         }
     `;
     document.head.appendChild(style);
